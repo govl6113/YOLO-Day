@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+
+<body>
+
+    <h1>실시간 게시글</h1>
+    <a href="/">home</a>
+    <hr> {% if user.is_authenticated %}
+    <a href="/blog/create_post">게시글 작성하기</a> {% endif %}
+
+
+
+    <hr> {% for p in post_list %}
+    <h3>{{p.title}}</h3>
+    <p>{{p.content | truncatechars:100}}</p>
+    <h3><a href="{{p.get_absolute_url}}">더보기</a></h3>
+
+
+    <div>
+        게시일 : {{p.created_at}} 작성자 : <a href="#">{{p.author|upper}}</a>
+    </div>
+
+    <hr> {%endfor %}
+
+
+</body>
+
+</html>

@@ -11,10 +11,13 @@
 
 <body>
     <nav>
+        <a href="/">홈</a>
         <a href="/blog/">실시간 게시글</a>
     </nav>
 
     {% if user.is_authenticated and user == post.author %}
+    <a href="/blog/delete_post/{{post.pk}}">삭제하기</a>
+
     <a href="/blog/update_post/{{post.pk}}">게시글 수정하기</a> {% endif %}
     <h1>제목 : {{post.title}}</h1>
     작성자 : <a href="#">{{post.author|upper}}</a>

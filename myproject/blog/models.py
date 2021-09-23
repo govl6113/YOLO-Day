@@ -17,6 +17,9 @@ class Post(models.Model):
     def get_absolute_url(self):
         return f'/blog/{self.pk}/'
 
+    def get_delete_url(self):
+        return '/delete_post/{self.pk}/'
+
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     author = models.ForeignKey(User, on_delete=models.CASCADE)

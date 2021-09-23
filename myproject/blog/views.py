@@ -1,7 +1,7 @@
 
 from django.views.generic import ListView, DetailView,CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic.edit import UpdateView
+from django.views.generic.edit import DeleteView, UpdateView
 from .models import Post, Comment
 from django.shortcuts import render, redirect
 from django.core.exceptions import PermissionDenied
@@ -20,7 +20,10 @@ class CommentUpdate(LoginRequiredMixin, UpdateView):
         else:
             raise PermissionDenied
 
-
+def delete_post(request, pk):
+    model = Post.objects.get(pk=pk)
+    model.delete()
+    return redirect('/blog/')
 
 
 def delete_comment(request, pk):
@@ -49,6 +52,10 @@ def new_comment(request,pk):
             return redirect(post.get_absolute_url())
     else:
         raise PermissionDenied
+
+
+
+
 
 
 class PostList(ListView):

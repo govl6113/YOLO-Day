@@ -23,7 +23,7 @@ class CommentUpdate(LoginRequiredMixin, UpdateView):
 def delete_post(request, pk):
     model = Post.objects.get(pk=pk)
     model.delete()
-    return redirect('/blog/')
+    return redirect('/com_1/')
 
 
 def delete_comment(request, pk):

@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'com_1',
     'recommand',
-
+    'myproject',
     
     
 

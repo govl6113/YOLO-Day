@@ -13,6 +13,9 @@ def about_me(request):
     return render(request,'single_pages/about_me.html')
 # Create your views here.
 
+def login1(request):
+    return render(request,'single_pages/login.html')
+
 
 def login(request):
     if request.method == "POST":
@@ -23,10 +26,10 @@ def login(request):
             auth.login(request, user)
             return HttpResponseRedirect('/')
         else:
-            return render(request, 'login.html', {'error':'username or password is incorrect'})
+            return render(request, 'single_pages/login.html', {'error':'username or password is incorrect'})
             # 로그인 실패시 'username or password is incorrect' 메시지를 띄움  
     else:
-        return render(request, 'login.html')
+        return render(request, 'single_pages/login.html')
 
 def logout(request):
     auth.logout(request)

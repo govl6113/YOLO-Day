@@ -8,5 +8,6 @@ urlpatterns = [
     path('', views.landing),
     path('login/', single_pages.login, name="login"),
     path('logout/', single_pages.logout, name="logout"),
+    path('login1/',views.login1),
     
 ]

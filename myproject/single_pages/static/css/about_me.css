@@ -1,0 +1,39 @@
+a {
+    text-decoration: none;
+}
+
+#but {
+    background-color: rgb(255, 255, 255);
+    font-size: large;
+    text-align: center;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    border-radius: 70%;
+    overflow: hidden;
+}
+
+.profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h4 {
+    font-family: 'Do Hyeon';
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+/* 
+    rem 대부분 씀 
+    px  em rem % 
+    px : 부모가 작아지든말든 child 갈길은 가 
+    em : 부모가 커지면 child가 따라감/ 단점: 부모가 여러개 있으면 몇배로 커짐 모든 부모 합해서
+    rem : 부모가 커지든 작아지든 root html 의 폰트 사이즈를 따라감.  
+    responsive : 
+
+*/

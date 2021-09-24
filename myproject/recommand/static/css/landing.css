@@ -1,0 +1,30 @@
+body {
+  background-color: #bcd8e6;
+}
+
+p {
+  margin: 3px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 900;
+  margin: 18px 0px 30px;
+}
+
+.title-span {
+  color: #fff7e2;
+  text-shadow: 2px 2px 2px black;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 1024px;
+  height: 800px;
+  background-color: #fff7e2;
+  box-shadow: 3px 3px 5px black;
+}

@@ -52,10 +52,18 @@ INSTALLED_APPS = [
     'com_1',
     'recommand',
     'myproject',
-    
-    
+    'com_2',
+    'com_3',
+    'com_4',
+    'com_5',
+    'com_6',
+    'com_7',
+    'com_8',
+    'com_9',
+    'com_10',
+    'com_11',
+    'com_12',
 
-    
 ]
 
 MIDDLEWARE = [

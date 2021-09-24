@@ -8,6 +8,14 @@ from django.core.exceptions import PermissionDenied
 from .forms import CommentForm
 from django.shortcuts import get_object_or_404
 # Create your views here.
+from .models import Comment
+from django import forms
+# Create your views here.
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields=('content',)
 
 
 class CommentUpdate(LoginRequiredMixin, UpdateView):
@@ -65,7 +73,7 @@ class PostList(ListView):
 #     posts = Post.objects.all().order_by('-pk')
 
 #     return render(
-#         request, 'blog/index.html',{'posts':posts,}
+#         request, 'com_1/index.html',{'posts':posts,}
 #     )
 class PostDetail(DetailView):
     model = Post
@@ -76,7 +84,7 @@ class PostDetail(DetailView):
 # def single_post_page(request,pk):
 #     post = Post.objects.get(pk=pk)
 
-#     return render(request, 'blog/single_post_page.html', {'post':post,})
+#     return render(request, 'com_1/single_post_page.html', {'post':post,})
 class PostCreate(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['title', 'content']

@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\bae10\Desktop\djangopro\myvenv"
+VIRTUAL_ENV="C:\Users\ey611\OneDrive\바탕 화면\YOLO-DAY\YOLO-Day\myvenv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

@@ -1,27 +1,29 @@
-{% load socialaccount %}
+{% load socialaccount %}{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+  </head>
 
-<body>
-    <a href="/">홈</a>
+  <body>
+    <div class="home"><a href="/">홈</a></div>
 
     <form action="{% url 'login' %}" method="POST">
-        {% csrf_token %} <input type="text" name="username" id="">
-        <br> <input type="password" name="password" id="">
-        <br>
-        <input type="submit" value="login" id="">
+      {% csrf_token %} <input type="text" name="username" id="" /> <br />
+      <input type="password" name="password" id="" />
+      <br />
+      <input type="submit" value="login" id="" />
     </form>
 
-    <a role="button" class="btn btn-outline-dark btn-block btn-sm" href="{% provider_login_url 'google' %}"><i class="fab fa-google"></i>&nbsp&nbsp 구글 로그인</a>
-
-
-</body>
-
+    <a
+      role="button"
+      class="btn btn-outline-dark btn-block btn-sm"
+      href="{% provider_login_url 'google' %}"
+      ><i class="fab fa-google"></i>&nbsp&nbsp 구글 로그인</a
+    >
+  </body>
 </html>

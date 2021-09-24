@@ -14,17 +14,108 @@ p {
   margin: 18px 0px 30px;
 }
 
+.title > a {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: #000;
+}
+
 .title-span {
   color: #fff7e2;
   text-shadow: 2px 2px 2px black;
 }
 
-section {
+/**
+* 여기부터 main
+*/
+#main {
   display: flex;
   justify-content: center;
   margin: auto;
   width: 1024px;
-  height: 800px;
+  height: 900px;
   background-color: #fff7e2;
   box-shadow: 3px 3px 5px black;
+
+  /**
+  *아래 삭제 
+  */
+  margin-bottom: 150px;
+}
+
+.back,
+.front {
+  width: 500px;
+  height: 600px;
+  border: 4px solid;
+}
+
+.back {
+  position: relative;
+  top: 80px;
+  right: 200px;
+  background-color: #fff;
+}
+
+.front {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  background-color: #bcd8e6;
+}
+
+.content {
+  width: 500px;
+  height: 125px;
+  border: 4px solid;
+  position: absolute;
+  top: 200px;
+  left: 400px;
+  background-color: #fff;
+}
+
+.start {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 200px;
+  border: 4px solid;
+  position: absolute;
+  top: 520px;
+  left: 340px;
+  background-color: #fff;
+}
+
+/**
+* 여기 부터 qna
+*/
+#qna {
+  display: none;
+}
+
+.answerList:hover,
+.answerList:focus {
+  background-color: #fff7e2;
+  color: #000;
+}
+
+.status {
+  height: 20px;
+  width: 80%;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.statusBar {
+  height: 100%;
+  border-radius: 20px;
+  background-color: red;
+}
+
+/**
+* 여기부터 result
+*/
+#result {
+  display: none;
 }

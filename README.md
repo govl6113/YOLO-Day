@@ -2,10 +2,12 @@
 가상환경 생성 및 실행
 생성
     Windows: python -m venv venv
+    
     Mac: python3 -m venv venv
 
 실행
     Windows: source venv/Scripts/activate
+    
     Mac: source venv/bin/activate
 
     

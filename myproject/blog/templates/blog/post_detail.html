@@ -20,7 +20,7 @@
 
     <a href="/blog/update_post/{{post.pk}}">게시글 수정하기</a> {% endif %}
     <h1>제목 : {{post.title}}</h1>
-    작성자 : <a href="#">{{post.author|upper}}</a>
+    작성자 : <a href="/about_me">{{post.author|upper}}</a>
     <p>{{post.created_at}}</p>
     <hr>
     <h6>내용 : </h6>

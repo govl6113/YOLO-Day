@@ -25,18 +25,18 @@
     <nav class="nav-main">
         <div class="nav">
             <a class="navbar-brand" href="">
-                <img src="">로고</a>
+                <a href="/">로고</a>
         </div>
         <div class="nav-menu">
+            <a href="/">Home</a>
             {% if not user.is_authenticated %}
-            <a href="">Join</a>
+            <!-- <a href="">Join</a> -->
             <a href="{% url 'login' %}">Login</a>
             {% endif %}
       {% if user.is_authenticated %}
-      <input type="button" id="popupReturn" value="{{user.username}}"  class="btn btn-danger">
+      <a href="{% url 'about_me' %}"><input type="button" id="popupReturn" value="{{user.username}}"  class="btn btn-danger"></a>
       {% endif %}
-      <a href="">Home</a>
-      <a href="">About us</a>
+    
       
     </div>
   </nav>

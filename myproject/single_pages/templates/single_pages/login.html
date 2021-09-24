@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% block container %}
 {% load socialaccount %}{% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +13,6 @@
 </head>
 
 <body>
-    <div class="home"><a href="/">홈</a></div>
     <section>
         <p class="p">로그인</p>
 
@@ -34,3 +35,4 @@
 
   </body>
 </html>
+{% endblock %}

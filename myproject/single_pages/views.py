@@ -4,10 +4,7 @@ from django.urls import reverse
 from django.contrib.auth.models import User # 장고가 주는 User 모델 
 from django.contrib import auth
 
-def landing(request):
-    return render(
-        request, 'single_pages/landing.html'
-    )
+
 
 def about_me(request):
     return render(request,'single_pages/about_me.html')

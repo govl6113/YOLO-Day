@@ -1,0 +1,46 @@
+{% load socialaccount %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>대문페이지 입니다.</h1>
+
+    <nav>
+      <div>
+        {% if error %} {{ error }} {% endif %}
+        <!-- 로그인 실패했을 때 띄울 메시지 -->
+        {% if user.is_authenticated %} <a href="/about_me/">마이페이지</a>
+
+        <!--  -->
+        <a href="{% url 'logout' %}">로그아웃</a>
+        <!--  -->
+        {% else %}
+
+        <a href="{% url 'login' %}">로그인화면으로 가기</a> {% endif %}
+        <br />
+      </div>
+      <br />
+      <li><a href="/blog/">인테리어 커뮤니티</a></li>
+      <li><a href="/com_1/">댄스 커뮤니티</a></li>
+      <li><a href="#">러닝 커뮤니티</a></li>
+      <li><a href="#">요리 커뮤니티</a></li>
+      <li><a href="#">그림그리기 커뮤니티</a></li>
+      <li><a href="#">자전거타기 커뮤니티</a></li>
+      <li><a href="#">등산 커뮤니티</a></li>
+      <li><a href="#">스포츠 커뮤니티</a></li>
+      <li><a href="#">게임 커뮤니티</a></li>
+      <li><a href="#">카메라 커뮤니티</a></li>
+      <li><a href="#">여행 커뮤니티</a></li>
+      <li><a href="#">악기 커뮤니티</a></li>
+    </nav>
+
+    <h3>아직 만들지 않음</h3>
+  </body>
+</html>

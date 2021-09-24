@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'single_pages',
     'crispy_forms',
     'com_1',
+    'recommand',
 
     
     

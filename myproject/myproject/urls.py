@@ -23,11 +23,12 @@ from django.urls import path
 
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('recommand.urls')),
     path('com_1/', include('com_1.urls')),
     path('blog/', include('blog.urls')),
-    path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')), #구글 
-    path('', include('single_pages.urls')),
+    path('single_page/', include('single_pages.urls')),
     
     
 

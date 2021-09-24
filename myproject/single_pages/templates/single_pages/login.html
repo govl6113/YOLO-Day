@@ -11,19 +11,36 @@
 
   <body>
     <div class="home"><a href="/">홈</a></div>
+    <section>
+      <p class="p">로그인</p>
 
-    <form action="{% url 'login' %}" method="POST">
-      {% csrf_token %} <input type="text" name="username" id="" /> <br />
-      <input type="password" name="password" id="" />
-      <br />
-      <input type="submit" value="login" id="" />
-    </form>
-
-    <a
-      role="button"
-      class="btn btn-outline-dark btn-block btn-sm"
-      href="{% provider_login_url 'google' %}"
-      ><i class="fab fa-google"></i>&nbsp&nbsp 구글 로그인</a
-    >
+      <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        <input
+          class="login"
+          type="text"
+          name="username"
+          id=""
+          placeholder="id를 입력하세요"
+        />
+        <br />
+        <input
+          class="password"
+          type="password"
+          name="password"
+          id=""
+          placeholder="password를 입력하세요"
+        />
+        <br />
+        <input class="login_btn" type="submit" value="login" id="" />
+        <br />
+      </form>
+      <a
+        role="button"
+        class="google-btn btn btn-outline-dark btn-block btn-sm"
+        href="{% provider_login_url 'google' %}"
+        ><i class="fab fa-google"></i>&nbsp&nbsp Google Login</a
+      >
+    </section>
   </body>
 </html>

@@ -8,6 +8,14 @@ from django.core.exceptions import PermissionDenied
 from .forms import CommentForm
 from django.shortcuts import get_object_or_404
 # Create your views here.
+from .models import Comment
+from django import forms
+# Create your views here.
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields=('content',)
 
 
 class CommentUpdate(LoginRequiredMixin, UpdateView):

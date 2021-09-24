@@ -38,15 +38,18 @@
 
                     <div class="card-body">
 
-                        <div class="card-footer text-muted">
 
-                            </a> {% if user.is_authenticated and user == post.author %}
+
+                        </a> {% if user.is_authenticated and user == post.author %}
+                        <div class="card-footer text-muted">
                             <a class="btn btn-outline-success my-2 my-sm-0" href="/blog/update_post/{{post.pk}}/" role="button">
                                 <i class="fas fa-pen"></i>수정 </a>
                             <a class="btn btn-outline-success my-2 my-sm-0" href="/blog/delete_post/{{post.pk}}">삭제</a>
                             <!--  -->
-                            {%endif%}
                         </div>
+
+                        {%endif%}
+
                     </div>
                 </div>
             </div>

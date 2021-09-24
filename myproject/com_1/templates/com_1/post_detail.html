@@ -8,75 +8,124 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{post.title}} com_1</title>
+    <title>{{post.title}} - com_1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
 
 <body>
+
     <nav>
         <a href="/">홈</a>
-        <a href="/com_1/">댄스</a>
+        <a href="/com_1/">댄스 커뮤니티</a>
     </nav>
 
-    {% if user.is_authenticated and user == post.author %}
-    <a href="/com_1/delete_post/{{post.pk}}">삭제하기</a>
-    <a href="/com_1/update_post/{{post.pk}}">게시글 수정하기</a> {% endif %}
-    <h1>제목 : {{post.title}}</h1>
-    작성자 : <a href="/about_me">{{post.author|upper}}</a>
-    <p>{{post.created_at}}</p>
-    <hr>
-    <h6>내용 : </h6>
-    <h4>{{post.create_at}}</h4>
-    <p>{{post.content}}</p>
+
     <br>
-    <hr>
-    <h6>댓글</h6>
-    <br> {% if user.is_authenticated %}
+    <div class="container my-3 " style="text-align: center;">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="card mb-4">
+                    <br>
+                    <h3>{{post.title}}</h3>
+
+                    <br>
+                    <h6>{{post.content}}</h6>
+                    <br>
+                    <br> {{post.created_at}} {{post.author | upper }}
+
+                    <div class="card-body">
 
 
 
-    <form id="comment-form" method="POST" action="{{ post.get_absolute_url }}new_comment/">
-        {% csrf_token %}
-        <div class="form-group">
-            {{ comment_form | crispy }}
+                        </a> {% if user.is_authenticated and user == post.author %}
+                        <div class="card-footer text-muted">
+                            <a class="btn btn-outline-success my-2 my-sm-0" href="/com_1/update_post/{{post.pk}}/" role="button">
+                                <i class="fas fa-pen"></i>수정 </a>
+                            <a class="btn btn-outline-success my-2 my-sm-0" href="/com_1/delete_post/{{post.pk}}">삭제</a>
+                            <!--  -->
+                        </div>
+
+                        {%endif%}
+
+                    </div>
+                </div>
+            </div>
         </div>
-        <button type="submit">Submit</button>
-    </form>
+    </div>
 
 
-    {%else %}
-    <a role="button" href="#" data-toggle="modal" data-target="#loginModal">Log in and leave a comment</a> {% endif %}
+    <div class="container my-3 " style="text-align: center;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card-body">
+                    {% if user.is_authenticated %}
+                    <form id="comment-form" method="POST" action="{{ post.get_absolute_url }}new_comment/">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            {{ comment_form | crispy }}
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-outline-success my-2 my-sm-0">댓글달기</button>
+                    </form>
+                    {% else %}
+                    <a role="button" class="btn btn-outline-dark btn-block btn-sm" href="#" data-toggle="modal" data-target="#loginModal">로그인 해주세요.</a> {% endif %}
+                </div>
 
-    <hr> {% if post.comment_set.exists %} {% for comment in post.comment_set.iterator %}
-    <div id="comment-{{comment.pk}}">
+            </div>
+        </div>
+    </div>
+
+
+    <div style="text-align: center;">
+        <!-- Comments Form -->
+
+
+        {% if post.comment_set.exists %} {% for comment in post.comment_set.iterator %}
+        <div class="container my-3 " style="text-align: center;">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="card mb-4">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Single Comment -->
+        <div class="media mb-2" id="comment-{{ comment.pk }}">
+
+            <div class="media-body">
+
+
+                <p>
+                    <h4>{{ comment.content|linebreaks }}</h4>
+                </p>
 
 
 
-        <h5 class="mt-0">
-            {{ comment.author.username }} &nbsp;&nbsp;
-            <small class="text-muted"></small>{{ comment.created_at }}</small>
-        </h5>
-        <p>{{ comment.content | linebreaks }}</p>
-        {% if user.is_authenticated and comment.author == user %}
-        <div class="float-right">
-            <a role="button" class="btn btn-sm btn-info" id="comment-{{ comment.pk }}-update-btn" href="/com_1/update_comment/{{ comment.pk }}/">
-                                    수정
-                                </a>
-
-            <a role="button" class="btn btn-sm btn-danger" href="/com_1/delete_comment/{{comment.pk}}/">삭제</a> {% if comment.created_at != comment.modified_at %}
-            <class="text_muted float-right"><small>수정된 날짜 : {{comment.modified_at}}</small></class=>
+                {% if comment.created_at != comment.modified_at %}
+                <p class="text-muted float-right"><small>수정 날짜 : {{ comment.modified_at }}&nbsp;&nbsp; {{ comment.author.username|upper }}</small></p>
+                {% else%}
+                <small class="text-muted">{{ comment.created_at }} &nbsp;&nbsp; {{ comment.author.username|upper }} </small><br> {% endif %}
+                <br>
+                <!--  -->
+                {% if user.is_authenticated and comment.author == user %}
+                <div class="float-right">
+                    <a role="button" class="btn btn-outline-success my-2 my-sm-0" id="comment-{{ comment.pk }}-update-btn" href="/com_1/update_comment/{{ comment.pk }}/">
+                            수정
+                        </a>
+                    <a role="button" class="btn btn-outline-success my-2 my-sm-0" href="/com_1/delete_comment/{{comment.pk}}/">삭제</a>
+                </div>
 
 
 
                 {% endif %}
-
+            </div>
         </div>
-        {% endif %}
-
-        <hr>
-
+        {% endfor %} {% endif %}
     </div>
-    {% endfor %} {% endif %}
-
 
 
 

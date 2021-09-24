@@ -87,13 +87,13 @@ class PostCreate(LoginRequiredMixin, CreateView):
             form.instance.author =current_user
             return super(PostCreate, self).form_valid(form)
         else:
-            return redirect('/blog/')
+            return redirect('/com_1/')
 
 class PostUpdate(LoginRequiredMixin, UpdateView):
     model =Post
     fields = ['title', 'content']
 
-    template_name = 'blog/post_update_form.html'
+    template_name = 'com_1/post_update_form.html'
 
 
     def dispatch(self, request, *args, **kwargs):

@@ -17,7 +17,6 @@
 
     {% if user.is_authenticated and user == post.author %}
     <a href="/com_1/delete_post/{{post.pk}}">삭제하기</a>
-
     <a href="/com_1/update_post/{{post.pk}}">게시글 수정하기</a> {% endif %}
     <h1>제목 : {{post.title}}</h1>
     작성자 : <a href="#">{{post.author|upper}}</a>

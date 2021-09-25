@@ -1,61 +1,78 @@
+@font-face {
+  src: url("../font/SB\ 어그로\ M.ttf");
+  font-family: "SBAggroM";
+}
+
 body {
-    text-align: center;
-  }
+  text-align: center;
+}
 
-  /* navbar */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+/* navbar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .nav-main {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 15vh;
-    background-color: transparent;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 1fr;
-    margin-right: 40px;
-    margin-left: 40px;
-  }
+.nav-main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 15vh;
+  background-color: transparent;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr;
+  margin-right: 40px;
+  margin-left: 40px;
+}
 
-  .nav-menu a {
-    font-size: 15px;
-    color: #8C8C8C;
-    text-decoration: none;
-    /* 글자 간격 2px */
-    letter-spacing: 2px;
-    position: relative;
-    padding: 6PX 12PX;
+.navbar-brand {
+  text-decoration: none;
+}
 
-  }
+.navbar-brand > p {
+  font-family: SBAggroM;
+  font-size: 30px;
+  color: #000;
+}
 
-  .nav-menu a::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background: #016FAC;
-    transition: all .5s ease-out;
-  }
+.navbar-brand > p:hover {
+  cursor: pointer;
+}
 
-  .nav-menu a:hover::after {
-    width: 100%;
+.nav-menu a {
+  font-size: 15px;
+  color: #8c8c8c;
+  text-decoration: none;
+  /* 글자 간격 2px */
+  letter-spacing: 2px;
+  position: relative;
+  padding: 6px 12px;
+}
 
-  }
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: #016fac;
+  transition: all 0.5s ease-out;
+}
 
-  .nav-menu a:hover {
-    cursor: pointer;
-    color: black;
-  }
+.nav-menu a:hover::after {
+  width: 100%;
+}
 
-  .nav-menu a:active {
-    font-weight: bold;
-    color: black;
-  }
+.nav-menu a:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.nav-menu a:active {
+  font-weight: bold;
+  color: black;
+}

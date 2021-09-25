@@ -50,11 +50,11 @@ const qnaList = [
     ],
   },
   {
-    q: "7. 핸드폰에 게임이 2개 이상 있다",
+    q: "7. 스팀 계정이 있나요?",
     a: [
       { answer: "예", type: [9] },
       {
-        answer: "아니오",
+        answer: "모른다",
         type: [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17],
       },
     ],
@@ -102,4 +102,32 @@ const qnaList = [
       },
     ],
   },
+];
+
+const infoList = [
+  {
+    key: 1,
+    path: "blog",
+  },
+  {
+    key: 2,
+    path: "com_1",
+  },
+  {
+    key: 3,
+    path: "com_2",
+  },
+  {
+    key: 4,
+    path: "com_3",
+  },
+  { key: 5, path: "com_4" },
+  { key: 6, path: "com_5" },
+  { key: 7, path: "com_6" },
+  { key: 8, path: "com_7" },
+  { key: 9, path: "com_8" },
+  { key: 10, path: "com_9" },
+  { key: 11, path: "com_10" },
+  { key: 12, path: "com_11" },
+  { key: 13, path: "com_12" },
 ];

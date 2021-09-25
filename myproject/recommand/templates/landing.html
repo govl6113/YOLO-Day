@@ -15,8 +15,11 @@
 
   <body>
     <div class="title">
+      <a href="/"
+        ><img src="../static/img/logo.png" width="110px" height="110px"
+      /></a>
       <a href="/">
-        <p>사이트명</p>
+        <p>Yolly_Yolly</p>
       </a>
     </div>
     <div class="container">
@@ -31,10 +34,17 @@
             </div>
             <p>당신의 취미를 찾아보시겠습니까?</p>
           </div>
+<<<<<<< HEAD
           <a href="{% url 'community' %}"
             ><button class="community-button">
               커뮤니티로 <br />바로 이동
             </button></a
+=======
+          <a href="#"
+            ><div class="community">
+              <p>COMMUNITY로<br />바로 이동</p>
+            </div></a
+>>>>>>> 19a31614d2394c1c74ae432e91c855d923930d8d
           >
           <div class="start">
             <p>아래 시작하기 버튼을 눌러 시작해주세요!</p>
@@ -53,9 +63,16 @@
         <p>당신에게 맞는 취미는?</p>
         <p>당신과 취향이 비슷한 사람들을 만나보세요!</p>
         <div class="cards">
-          <div class="result-card"><a href="#" class="resultA1"></a></div>
-          <div class="result-card"><a href="#" class="resultA2"></a></div>
-          <div class="result-card"><a href="#" class="resultA3"></a></div>
+          <div class="result-card">
+            <a href="#" class="resultA1"></a>
+          </div>
+          <div class="result-card">
+            <a href="{% url 'running'%}" class="resultA2"></a>
+          </div>
+          <div class="result-card"><a href="" class="resultA3"></a></div>
+        </div>
+        <div class="test">
+          <a href="/"><button class="test-button">테스트 다시하기</button></a>
         </div>
       </section>
     </div>

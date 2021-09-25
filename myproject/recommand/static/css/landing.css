@@ -1,9 +1,19 @@
+@font-face {
+  src: url("../fonts/SB\ 어그로\ M.ttf");
+  font-family: "SBAggroM";
+}
+
 body {
   background-color: #bcd8e6;
 }
 
 p {
   margin: 3px;
+  font-family: SBAggroM;
+}
+button,
+span {
+  font-family: SBAggroM;
 }
 
 .container {
@@ -11,18 +21,29 @@ p {
   justify-content: center;
   width: 1024px;
   height: 900px;
-  margin: 50px auto 50px;
+  margin: 30px auto 50px;
 }
 
 .title {
   display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.title > a:first-child > img {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 30px auto auto;
 }
 
 .title > a {
   display: flex;
+  justify-content: center;
   text-decoration: none;
   color: #000;
+  font-family: SBAggroB;
+  font-size: 60px;
 }
 
 /**
@@ -81,7 +102,7 @@ p {
 }
 
 .content-span {
-  color: #fff7e2;
+  color: #bcd8e6;
   text-shadow: 2px 2px 2px black;
 }
 
@@ -90,21 +111,25 @@ p {
   justify-content: center;
 }
 
-.community-button {
+.community {
   position: absolute;
-  width: 220px;
-  height: 80px;
-  border: 4px solid;
-  border-radius: 20px;
-  background-color: #d82251;
-  font-size: 22px;
-  font-weight: 600;
+  width: 270px;
   top: -50px;
-  left: 700px;
+  left: 670px;
 }
 
-.community-button:hover {
+.community:hover,
+.test-button {
   cursor: pointer;
+}
+
+.community > p {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: #d82251;
 }
 
 .start {
@@ -124,6 +149,7 @@ p {
   display: flex;
   justify-content: center;
   font-weight: 600;
+  font-size: 18px;
   margin-top: 50px;
 }
 
@@ -137,6 +163,9 @@ p {
   margin: auto;
   font-size: 20px;
   cursor: pointer;
+  color: #fff;
+  background-color: #d82251;
+  text-shadow: 2px 2px 2px black;
 }
 
 /**
@@ -159,8 +188,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
-  margin: 0px 16px 60px;
+  margin: 0px 16px 70px;
   box-sizing: border-box;
   border-radius: 20px;
   font-family: SBAggroM;
@@ -179,6 +207,7 @@ p {
   width: 160px;
   height: 70px;
   border-radius: 81px;
+  margin-bottom: 20px;
   border: solid 5px #6174a3;
   background-color: #fff6e0;
   font-size: 20px;
@@ -194,7 +223,7 @@ p {
 .status {
   width: 60%;
   height: 6px;
-  margin: 105px auto auto;
+  margin: auto;
   border-radius: 16px;
   border: solid 1px #000;
   background-color: #fff;
@@ -237,9 +266,9 @@ p {
 .result-card {
   display: block;
   width: 300px;
-  height: 400px;
+  height: 300px;
+  margin: 20px;
   border-radius: 20px;
-  background-color: #fff;
   opacity: 1;
 }
 
@@ -248,9 +277,31 @@ p {
   cursor: pointer;
 }
 
-img {
-  width: 290px;
-  height: 390px;
-  margin: 5px;
+.result-card > a > img {
+  width: 300px;
+  height: 300px;
   border-radius: 20px;
+}
+
+.test {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.test > a {
+  text-decoration: none;
+}
+
+.test-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 290px;
+  height: 55px;
+  border-radius: 51px;
+  box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.65);
+  border: solid 4px #000;
+  background-color: #fff6e0;
+  font-size: 28px;
 }

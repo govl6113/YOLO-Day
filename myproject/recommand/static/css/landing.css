@@ -6,24 +6,23 @@ p {
   margin: 3px;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  width: 1024px;
+  height: 900px;
+  margin: 50px auto 50px;
+}
+
 .title {
   display: flex;
   justify-content: center;
-  font-size: 40px;
-  font-weight: 900;
-  margin: 18px 0px 30px;
 }
 
 .title > a {
   display: flex;
-  flex-direction: row;
   text-decoration: none;
   color: #000;
-}
-
-.title-span {
-  color: #fff7e2;
-  text-shadow: 2px 2px 2px black;
 }
 
 /**
@@ -32,16 +31,10 @@ p {
 #main {
   display: flex;
   justify-content: center;
-  margin: auto;
   width: 1024px;
-  height: 900px;
+  height: 100%;
   background-color: #fff7e2;
   box-shadow: 3px 3px 5px black;
-
-  /**
-  *아래 삭제 
-  */
-  margin-bottom: 150px;
 }
 
 .back,
@@ -66,6 +59,8 @@ p {
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
   width: 500px;
   height: 125px;
   border: 4px solid;
@@ -73,11 +68,49 @@ p {
   top: 200px;
   left: 400px;
   background-color: #fff;
+  font-weight: 600;
+}
+
+.content > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  color: #000;
+  font-size: 36px;
+  margin: 15px 0px 5px;
+}
+
+.content-span {
+  color: #fff7e2;
+  text-shadow: 2px 2px 2px black;
+}
+
+.content > p {
+  display: flex;
+  justify-content: center;
+}
+
+.community-button {
+  position: absolute;
+  width: 220px;
+  height: 80px;
+  border: 4px solid;
+  border-radius: 20px;
+  background-color: #d82251;
+  font-size: 22px;
+  font-weight: 600;
+  top: -50px;
+  left: 700px;
+}
+
+.community-button:hover {
+  cursor: pointer;
 }
 
 .start {
   display: flex;
   flex-direction: column;
+  /* justify-content: space-evenly; */
   width: 500px;
   height: 200px;
   border: 4px solid;
@@ -87,30 +120,90 @@ p {
   background-color: #fff;
 }
 
+.start > p {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  margin-top: 50px;
+}
+
+.start > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 60px;
+  border-radius: 20px;
+  margin: auto;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 /**
 * 여기 부터 qna
 */
 #qna {
   display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 718px;
+  height: 550px;
+  padding: 120px 0px 120px;
+  margin-top: 100px;
+  border: #000 0.5px solid;
+  background-color: #fff7e2;
+}
+
+.qBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+  margin: 0px 16px 60px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  font-family: SBAggroM;
+  font-size: 50px;
+  color: #6174a3;
+  font-size: 50px;
+  line-height: 1.2;
+}
+
+.answerBox {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.answerList {
+  width: 160px;
+  height: 70px;
+  border-radius: 81px;
+  border: solid 5px #6174a3;
+  background-color: #fff6e0;
+  font-size: 20px;
 }
 
 .answerList:hover,
 .answerList:focus {
-  background-color: #fff7e2;
-  color: #000;
+  background-color: #6174a3;
+  cursor: pointer;
+  color: #fff;
 }
 
 .status {
-  height: 20px;
-  width: 80%;
-  border-radius: 20px;
+  width: 60%;
+  height: 6px;
+  margin: 105px auto auto;
+  border-radius: 16px;
+  border: solid 1px #000;
   background-color: #fff;
 }
 
 .statusBar {
   height: 100%;
   border-radius: 20px;
-  background-color: red;
+  background-color: #d82251;
 }
 
 /**
@@ -118,4 +211,46 @@ p {
 */
 #result {
   display: none;
+}
+
+#result > p:first-child {
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+  font-size: 80px;
+  font-weight: 800;
+}
+
+#result > p:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0px 100px;
+  font-size: 25px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.result-card {
+  display: block;
+  width: 300px;
+  height: 400px;
+  border-radius: 20px;
+  background-color: #fff;
+  opacity: 1;
+}
+
+.result-card:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+img {
+  width: 290px;
+  height: 390px;
+  margin: 5px;
+  border-radius: 20px;
 }

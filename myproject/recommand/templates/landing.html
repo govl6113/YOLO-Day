@@ -1,6 +1,4 @@
-{% extends 'base.html' %}
-{% block container %}
-{% load socialaccount %}{% load static %}
+{% load socialaccount %} {% load static %}
 <!DOCTYPE html>
 
 <html lang="en">
@@ -12,22 +10,32 @@
     <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
     <link rel="stylesheet" href="{% static 'css/animation.css' %}" />
     <title>취미 추천 test</title>
-    {% endblock%}
+    {% endblock %}
   </head>
 
   <body>
     <div class="title">
       <a href="/">
-        <p>나의</p>
-        <span class="title-span"> 취미 찾기 </span>
-        <p>테스트</p></a
-      >
+        <p>사이트명</p>
+      </a>
     </div>
     <div class="container">
       <section id="main">
         <div class="back">
           <div class="front"></div>
-          <div class="content">당신의 취미를 찾아보시겠습니까?</div>
+          <div class="content">
+            <div>
+              <p>나의</p>
+              <span class="content-span"> 취미 찾기 </span>
+              <p>테스트</p>
+            </div>
+            <p>당신의 취미를 찾아보시겠습니까?</p>
+          </div>
+          <a href="#"
+            ><button class="community-button">
+              커뮤니티로 <br />바로 이동
+            </button></a
+          >
           <div class="start">
             <p>아래 시작하기 버튼을 눌러 시작해주세요!</p>
             <button type="button" class="btn" onclick="js:begin()">
@@ -37,18 +45,21 @@
         </div>
       </section>
       <section id="qna">
-        <div class="status"><div class="statusBar"></div></div>
         <div class="qBox"></div>
         <div class="answerBox"></div>
+        <div class="status"><div class="statusBar"></div></div>
       </section>
       <section id="result">
-        <p>당신의 결과는?!</p>
-        <div class="resultImg"></div>
-        <div class="resultImg"></div>
-        <div class="resultImg"></div>
+        <p>당신에게 맞는 취미는?</p>
+        <p>당신과 취향이 비슷한 사람들을 만나보세요!</p>
+        <div class="cards">
+          <div class="result-card"><a href="#" class="resultA1"></a></div>
+          <div class="result-card"><a href="#" class="resultA2"></a></div>
+          <div class="result-card"><a href="#" class="resultA3"></a></div>
+        </div>
       </section>
     </div>
+    <script src="././static/js/data.js" charset="utf-8"></script>
     <script src="././static/js/start.js" charset="utf-8"></script>
   </body>
 </html>
-{% endblock %}

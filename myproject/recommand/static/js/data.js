@@ -130,8 +130,4 @@ const infoList = [
   { key: 11, path: "com_10" },
   { key: 12, path: "com_11" },
   { key: 13, path: "com_12" },
-  // { key: 14, path: 'exotic' },
-  // { key: 15, path: 'exotic' },
-  // { key: 16, path: 'exotic' },
-  // { key: 17, path: 'exotic' },
 ];

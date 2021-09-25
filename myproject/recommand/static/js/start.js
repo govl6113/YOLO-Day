@@ -5,9 +5,9 @@ const ENDPOINT = 12; //질문갯수
 const select = [
   { value: 0, key: 0 },
   { value: 0, key: 1 },
-  { value: 0, key: 2 },
-  { value: 0, key: 3 },
-  { value: 0, key: 4 },
+  { value: 1, key: 2 },
+  { value: 2, key: 3 },
+  { value: 3, key: 4 },
   { value: 0, key: 5 },
   { value: 0, key: 6 },
   { value: 0, key: 7 },
@@ -48,6 +48,34 @@ function setResult() {
   const resultImg2 = document.createElement("img");
   const resultImg3 = document.createElement("img");
 
+  for (let i = 0; i < point.length; i++) {
+    if (point[i] > 13) point[i] = 13;
+  }
+
+  for (let i = 0; i < infoList.length; i++) {
+    if (point[0] === infoList[i].key) {
+      const aaa = infoList[i].path;
+      imgA1.href = `${aaa}`;
+      break;
+    }
+  }
+
+  for (let i = 0; i < infoList.length; i++) {
+    if (point[1] === infoList[i].key) {
+      const aaa = infoList[i].path;
+      imgA2.href = `${aaa}`;
+      break;
+    }
+  }
+
+  for (let i = 0; i < infoList.length; i++) {
+    if (point[2] === infoList[i].key) {
+      const aaa = infoList[i].path;
+      imgA3.href = `${aaa}`;
+      break;
+    }
+  }
+
   const imgURL1 = "static/img/image-" + point[0] + ".png";
   const imgURL2 = "static/img/image-" + point[1] + ".png";
   const imgURL3 = "static/img/image-" + point[2] + ".png";
@@ -84,11 +112,6 @@ function addAnswer(answerText, qIdx, idx) {
   answer.classList.add("answerList");
   answer.classList.add("fadeIn");
 
-  /**
-   *
-   * answer.classList.add('my-3) // margin 3
-   */
-
   a.appendChild(answer);
   answer.innerHTML = answerText;
 
@@ -117,7 +140,6 @@ function addAnswer(answerText, qIdx, idx) {
 }
 
 function goNext(qIdx) {
-  console.log("goNext");
   if (qIdx === ENDPOINT) {
     goResult();
     return;
@@ -141,7 +163,7 @@ function begin() {
       main.style.display = "none";
       qna.style.display = "flex";
     }, 450);
-    let qIdx = 0;
+    let qIdx = 12;
     goNext(qIdx);
   }, 450);
 }

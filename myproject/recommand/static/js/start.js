@@ -163,7 +163,8 @@ function begin() {
       main.style.display = "none";
       qna.style.display = "flex";
     }, 450);
-    let qIdx = 12;
+    let qIdx = 0;
+    console.log(qIdx);
     goNext(qIdx);
   }, 450);
 }

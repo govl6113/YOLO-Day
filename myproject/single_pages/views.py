@@ -10,6 +10,10 @@ def about_me(request):
     return render(request,'single_pages/about_me.html')
 # Create your views here.
 
+def community(request):
+    return render(request,'single_pages/community.html')
+# Create your views here.
+
 def login1(request):
     return render(request,'single_pages/login.html')
 

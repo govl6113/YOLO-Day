@@ -35,10 +35,12 @@ section {
 }
 
 .login_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 525px;
   height: 49px;
-  margin: 25px 378px 25px 357px;
-  padding: 14px 237px;
+  margin: 25px 378px 15px 357px;
   border-radius: 8px;
   background-color: #fff7e2;
   font-size: 20px;
@@ -50,7 +52,7 @@ section {
   align-items: center;
   width: 440px;
   height: 49px;
-  margin: 30px 378px 25px 357px;
+  margin: 5px 378px 25px 357px;
   border-radius: 8px;
   box-sizing: border-box;
   background-color: #cf2002;

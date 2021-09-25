@@ -25,7 +25,7 @@ def login(request):
         user = auth.authenticate(request, username=username, password=password)
         if user is not None:
             auth.login(request, user)
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect('single_pages/community.html')
         else:
             return render(request, 'single_pages/login.html', {'error':'username or password is incorrect'})
             # 로그인 실패시 'username or password is incorrect' 메시지를 띄움  

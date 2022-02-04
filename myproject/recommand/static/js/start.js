@@ -33,12 +33,11 @@ function calResult() {
     }
     return 0;
   });
-  let result = [resultArray[0].key, resultArray[1].key, resultArray[2].key];
-  return result;
+  return [resultArray[0].key, resultArray[1].key, resultArray[2].key];
 }
 
 function setResult() {
-  const point = calResult(); //[16,9,2]
+  const resultList = calResult().map((x) => (x > 13 ? 13 : x));
 
   const imgA1 = document.querySelector(".resultA1");
   const imgA2 = document.querySelector(".resultA2");
@@ -48,44 +47,37 @@ function setResult() {
   const resultImg2 = document.createElement("img");
   const resultImg3 = document.createElement("img");
 
-  for (let i = 0; i < point.length; i++) {
-    if (point[i] > 13) point[i] = 13;
-  }
-
   for (let i = 0; i < infoList.length; i++) {
-    if (point[0] === infoList[i].key) {
-      const aaa = infoList[i].path;
-      imgA1.href = `${aaa}`;
+    if (resultList[0] === infoList[i].key) {
+      imgA1.href = `${infoList[i].path}`;
       break;
     }
   }
 
   for (let i = 0; i < infoList.length; i++) {
-    if (point[1] === infoList[i].key) {
-      const aaa = infoList[i].path;
-      imgA2.href = `${aaa}`;
+    if (resultList[1] === infoList[i].key) {
+      imgA2.href = `${infoList[i].path}`;
       break;
     }
   }
 
   for (let i = 0; i < infoList.length; i++) {
-    if (point[2] === infoList[i].key) {
-      const aaa = infoList[i].path;
-      imgA3.href = `${aaa}`;
+    if (resultList[2] === infoList[i].key) {
+      imgA3.href = `${infoList[i].path}`;
       break;
     }
   }
 
-  const imgURL1 = "static/img/image-" + point[0] + ".png";
-  const imgURL2 = "static/img/image-" + point[1] + ".png";
-  const imgURL3 = "static/img/image-" + point[2] + ".png";
+  const imgURL1 = "static/img/image-" + resultList[0] + ".png";
+  const imgURL2 = "static/img/image-" + resultList[1] + ".png";
+  const imgURL3 = "static/img/image-" + resultList[2] + ".png";
 
   resultImg1.src = imgURL1;
-  resultImg1.alt = point[0];
+  resultImg1.alt = resultList[0];
   resultImg2.src = imgURL2;
-  resultImg2.alt = point[1];
+  resultImg2.alt = resultList[1];
   resultImg3.src = imgURL3;
-  resultImg3.alt = point[2];
+  resultImg3.alt = resultList[2];
 
   imgA1.appendChild(resultImg1);
   imgA2.appendChild(resultImg2);

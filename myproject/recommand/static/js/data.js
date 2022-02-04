@@ -105,22 +105,10 @@ const qnaList = [
 ];
 
 const infoList = [
-  {
-    key: 1,
-    path: "blog",
-  },
-  {
-    key: 2,
-    path: "com_1",
-  },
-  {
-    key: 3,
-    path: "com_2",
-  },
-  {
-    key: 4,
-    path: "com_3",
-  },
+  { key: 1, path: "blog" },
+  { key: 2, path: "com_1" },
+  { key: 3, path: "com_2" },
+  { key: 4, path: "com_3" },
   { key: 5, path: "com_4" },
   { key: 6, path: "com_5" },
   { key: 7, path: "com_6" },

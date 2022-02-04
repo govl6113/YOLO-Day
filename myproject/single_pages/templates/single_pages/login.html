@@ -1,38 +1,46 @@
-{% extends 'base.html' %}
-{% block container %}
-{% load socialaccount %}{% load static %}
+{% extends 'base.html' %} {% block container %} {% load socialaccount %}{% load
+static %}
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'css/login.css' %}" />
-</head>
+  </head>
 
-<body>
+  <body>
     <section>
-        <p class="p">로그인</p>
-
-        <form action="{% url 'login' %}" method="POST">
-            {% csrf_token %}
-            <input class="login" type="text" name="username" id="" placeholder="jihyun" />
-            <br />
-            <input class="password" type="password" name="password" id="" placeholder="6113" />
-            <br />
-            <input class="login_btn" type="submit" value="login" id="" />
-            <br />
-        </form>
-        <a role="button" class="google-btn btn btn-outline-dark btn-block btn-sm" href="{% provider_login_url 'google' %}"><i class="fab fa-google"></i>&nbsp&nbsp Google Login</a
-      >
+      <p class="p">로그인</p>
+      <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        <input
+          class="login"
+          type="text"
+          name="username"
+          id=""
+          placeholder="jihyun"
+        />
+        <br />
+        <input
+          class="password"
+          type="password"
+          name="password"
+          id=""
+          placeholder="6113"
+        />
+        <br />
+        <input class="login_btn" type="submit" value="login" id="" />
+        <br />
+      </form>
+      <a
+        role="button"
+        class="google-btn btn btn-outline-dark btn-block btn-sm"
+        href="{% provider_login_url 'google' %}"
+        ><i class="fab fa-google"></i>&nbsp&nbsp Google Login
+      </a>
     </section>
-
-
-
- 
-
   </body>
 </html>
 {% endblock %}

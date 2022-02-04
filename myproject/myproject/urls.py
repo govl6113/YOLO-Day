@@ -38,10 +38,7 @@ urlpatterns = [
     path('com_10/', include('com_10.urls')),
     path('com_11/', include('com_11.urls')),
     path('com_12/', include('com_12.urls')),
-
-
     path('blog/', include('blog.urls')),
     path('accounts/', include('allauth.urls')), #구글 
     path('single_page/', include('single_pages.urls')),
-    
 ] + static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)

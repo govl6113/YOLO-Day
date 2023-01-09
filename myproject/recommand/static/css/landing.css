@@ -11,6 +11,7 @@ p {
   margin: 3px;
   font-family: SBAggroM;
 }
+
 button,
 span {
   font-family: SBAggroM;
@@ -47,7 +48,7 @@ span {
 }
 
 /**
-* 여기부터 main
+* main
 */
 #main {
   display: flex;
@@ -135,7 +136,6 @@ span {
 .start {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-evenly; */
   width: 500px;
   height: 200px;
   border: 4px solid;
@@ -169,7 +169,7 @@ span {
 }
 
 /**
-* 여기 부터 qna
+* qna
 */
 #qna {
   display: none;
@@ -194,7 +194,6 @@ span {
   font-family: SBAggroM;
   font-size: 50px;
   color: #6174a3;
-  font-size: 50px;
   line-height: 1.2;
 }
 
@@ -236,7 +235,7 @@ span {
 }
 
 /**
-* 여기부터 result
+* result
 */
 #result {
   display: none;

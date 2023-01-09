@@ -5,12 +5,15 @@ body {
   text-align: center;
 }
 
+h1 {
+  font-family: "SBAggroM";
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
 .title {
     font-size: 150px;
 }

@@ -121,13 +121,40 @@ const infoList = [
     key: 4,
     path: "com_3",
   },
-  { key: 5, path: "com_4" },
-  { key: 6, path: "com_5" },
-  { key: 7, path: "com_6" },
-  { key: 8, path: "com_7" },
-  { key: 9, path: "com_8" },
-  { key: 10, path: "com_9" },
-  { key: 11, path: "com_10" },
-  { key: 12, path: "com_11" },
-  { key: 13, path: "com_12" },
+  {
+    key: 5, 
+    path: "com_4"
+  },
+  { 
+    key: 6, 
+    path: "com_5"
+  },
+  { 
+    key: 7, 
+    path: "com_6"
+  },
+  { 
+    key: 8, 
+    path: "com_7"
+  },
+  {
+     key: 9, 
+    path: "com_8"
+   },
+  {
+     key: 10,
+     path: "com_9" 
+    },
+  { 
+    key: 11,
+     path: "com_10" 
+    },
+  { 
+    key: 12,
+     path: "com_11" 
+    },
+  { 
+    key: 13,
+     path: "com_12"
+     },
 ];

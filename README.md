@@ -44,17 +44,21 @@ MZ세대의 모토 'YOLO(You Only Live Once)'에 맞게 개개인의 취향과 �
 ### 실행 방법
 
 1. 가상 환경 실행
-```
+    
+    ```
     Windows: source myvenv/Scripts/activate
     
     Mac: source myvenv/bin/activate
-```
+    ```
 
 2. 패키지 설치
-```
+
+    ```
     pip install -r requirements.txt
-```
+    ```
+  
 3. 서버 실행
-```
+
+    ```
     python myproject/manage.py runserver
-```
+    ```

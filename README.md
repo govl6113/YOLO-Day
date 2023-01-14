@@ -21,43 +21,51 @@ MZ세대의 모토 'YOLO(You Only Live Once)'에 맞게 개개인의 취향과 �
 <br>
 <br>
 
-### 실행 화면
-#### 홈 화면
-<img src="https://user-images.githubusercontent.com/81179951/211205875-7f1565f6-12cb-4893-af6d-e0b50abea2bd.png" width="75%" height="50%"></img>
-#### 홈 화면에서 Start 버튼을 눌러 취미 찾기 테스트 진행
-<img src="https://user-images.githubusercontent.com/81179951/211207050-45f3a1b4-67f8-45d9-8087-c3b9f7131a03.png" width="75%" height="50%"></img>
-<img src="https://user-images.githubusercontent.com/81179951/211207091-c098ba8d-d289-467e-a649-f579e8ffa645.png" width="75%" height="50%"></img>
-#### 테스트 결과
-<img src="https://user-images.githubusercontent.com/81179951/211207236-e6b1764d-0435-4da9-b07f-5ccc21f0a2ae.png" width="75%" height="50%"></img>
-#### 홈 화면에서 "Community로 바로 이동" 버튼을 클릭
-<img src="https://user-images.githubusercontent.com/81179951/211207908-540c6cb2-bbfd-4c3b-9e70-21b50a8cad1d.png" width="75%" height="50%"></img>
-<br>
-#### 취미를 눌러 커뮤니티로 이동 
-<img src="https://user-images.githubusercontent.com/81179951/211207274-d1f3e0c7-083e-4441-adc8-883c445678bb.png" width="75%" height="50%"></img>
-#### 로그인
-<img src="https://user-images.githubusercontent.com/81179951/211209358-4c284b51-8758-4ce2-9663-0605818dbf1c.png" width="75%" height="50%"></img>
-#### 게시판에서 게시글과 댓글 작성
-<img src="https://user-images.githubusercontent.com/81179951/211207334-a7ffbf49-1335-479a-b9ea-516e9707f423.png" width="75%" height="50%"></img>
+### 시연 화면
+> #### 취미 추천 테스트
+>  - 취미 추천 테스트 진행
+>  - 결과 페이지에서 추천 받은 취미를 눌러, 해당 취미의 커뮤니티로 이동
+>
+> ![취미 테스트](https://user-images.githubusercontent.com/81179951/212459168-c85ecb38-2cbc-48f1-9c3d-4eab216fa6cb.gif)
+
+> #### 취미 커뮤니티
+> - 로그인
+> - 댓글 작성 및 삭제
+> - 해당 취미와 연관된 사이트로 이동
+>   
+> ![취미 댓글](https://user-images.githubusercontent.com/81179951/212459173-ecdd3c5b-a811-4961-b710-0ea70da97a1a.gif)
+
+> #### 취미 커뮤니티
+> - 게시글 작성 및 삭제
+> - 로그아웃
+>   
+> ![취미 게시글 로그아웃 (1)](https://user-images.githubusercontent.com/81179951/212459171-c636462f-859c-4e66-bf9c-e619e41c6719.gif)
+
+
 <br>
 <br>
 
 ### 실행 방법
 
-1. 가상 환경 실행
+1. 가상 환경 생성
+   ```
+   python -m venv {가상 환경 이름}
+   ```
+2. 가상 환경 실행
     
     ```
-    Windows: source myvenv/Scripts/activate
+    Windows: source {가상 환경 이름}/Scripts/activate
     
-    Mac: source myvenv/bin/activate
+    Mac: source {가상 환경 이름}/bin/activate
     ```
 
-2. 패키지 설치
+3. 패키지 설치
 
     ```
     pip install -r requirements.txt
     ```
   
-3. 서버 실행
+4. 서버 실행
 
     ```
     python myproject/manage.py runserver
